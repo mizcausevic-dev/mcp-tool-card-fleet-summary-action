@@ -1,0 +1,37 @@
+name: "MCP Tool Card Fleet Summary"
+description: "Walk a directory of MCP Tool Cards, count by side-effect class and pii_exposure, surface governance gaps (destructive-without-human-approval, high-pii-without-rate-limit, writes-secrets-without-audit, etc.), post a Markdown summary as a PR comment, and fail the build when high-severity findings exist."
+author: "mizcausevic-dev"
+branding:
+  icon: "shield"
+  color: "blue"
+
+inputs:
+  cards-dir:
+    description: "Directory containing *.json MCP Tool Card documents."
+    required: true
+  comment-on-pr:
+    description: "Post the Markdown summary as a PR comment. 'auto' (default) posts only on pull_request events; 'true' / 'false' force the behavior."
+    required: false
+    default: "auto"
+  fail-on-high:
+    description: "Fail the run when any high-severity finding is present (default 'true')."
+    required: false
+    default: "true"
+  github-token:
+    description: "Token used to post the PR comment (defaults to GITHUB_TOKEN)."
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  total-cards:
+    description: "Number of Tool Cards analyzed."
+  high-findings:
+    description: "Count of high-severity findings."
+  destructive-tools:
+    description: "Number of destructive tools in the fleet."
+  tools-requiring-approval:
+    description: "Number of tools that declare safety.human_approval_required: true."
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
