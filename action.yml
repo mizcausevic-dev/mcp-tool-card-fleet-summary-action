@@ -1,5 +1,5 @@
 name: "MCP Tool Card Fleet Summary"
-description: "Walk a directory of MCP Tool Cards, count by side-effect class and pii_exposure, surface governance gaps (destructive-without-human-approval, high-pii-without-rate-limit, writes-secrets-without-audit, etc.), post a Markdown summary as a PR comment, and fail the build when high-severity findings exist."
+description: "Walk a directory of MCP Tool Cards, surface governance gaps, post summary on PR, fail on high-severity findings."
 author: "mizcausevic-dev"
 branding:
   icon: "shield"
