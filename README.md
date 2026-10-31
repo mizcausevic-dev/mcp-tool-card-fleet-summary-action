@@ -66,8 +66,10 @@ jobs:
 
 - [**`mcp-tool-card-fleet-summary`**](https://github.com/mizcausevic-dev/mcp-tool-card-fleet-summary) — the library this wraps.
 - [**`mcp-tool-card-spec`**](https://github.com/mizcausevic-dev/mcp-tool-card-spec) — the schema this reads.
-- [**`mcp-tool-card-stamp`**](https://github.com/mizcausevic-dev/mcp-tool-card-stamp) · [**`mcp-tool-card-diff`**](https://github.com/mizcausevic-dev/mcp-tool-card-diff) · [**`mcp-tool-card-summary`**](https://github.com/mizcausevic-dev/mcp-tool-card-summary) — full Tool Card tool family.
+- [**`mcp-tool-card-stamp`**](https://github.com/mizcausevic-dev/mcp-tool-card-stamp) · [**`mcp-tool-card-diff`**](https://github.com/mizcausevic-dev/mcp-tool-card-diff) — related Tool Card tools.
 - [**`agent-card-fleet-summary-action`**](https://github.com/mizcausevic-dev/agent-card-fleet-summary-action) — sibling Action for the A2A side.
+
+Historical reference: [**`mcp-tool-card-summary`**](https://github.com/mizcausevic-dev/mcp-tool-card-summary) is archived and read-only on GitHub as checked on 2026-10-30; its source remains available.
 
 ## License
 
